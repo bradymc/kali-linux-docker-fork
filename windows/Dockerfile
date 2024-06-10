@@ -86,8 +86,8 @@ RUN apt install -y burpsuite nmap net-tools metasploit-framework nmap aircrack-n
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install wireshark
 RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure wireshark-common
-RUN chmod +x /usr/bin/dumpcap
-
+RUN chmod +x /usr/bin/dumpcap && chmod u+s /usr/bin/dumpcap && setcap cap_net_raw,cap_net_admin=ep /usr/bin/dumpcap && chown root /usr/bin/dumpcap
+RUN yes | dpkg-reconfigure wireshark-common
 
 # #####################################################
 # create the start bash shell file
@@ -109,6 +109,7 @@ RUN apt -y install --no-install-recommends ${KALI_PKG}
 
 RUN useradd -m -s /bin/bash -G sudo ${UNAME}
 RUN echo "${UNAME}:${UPASS}" | chpasswd
+RUN usermod -a -G wireshark ${UNAME}
 
 # #####################################################
 # change the ssh port in /etc/ssh/sshd_config
