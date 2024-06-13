@@ -82,7 +82,9 @@ RUN apt -y install --no-install-recommends sudo wget curl dbus-x11 xinit openssh
 RUN apt -y install locales
 RUN sed -i s/^#\ en_US.UTF-8\ UTF-8/en_US.UTF-8\ UTF-8/ /etc/locale.gen
 RUN locale-gen
-RUN apt install -y burpsuite nmap net-tools metasploit-framework nmap aircrack-ng hydra john hashcat sqlmap recon-ng sublist3r dirb
+RUN apt install -y burpsuite nmap net-tools metasploit-framework nmap aircrack-ng hydra john hashcat sqlmap recon-ng sublist3r dirb libc6 libgcc-s1 
+libnode109 libstdc++6 lsof npm xdg-utils
+RUN git clone https://github.com/juice-shop/juice-shop.git --depth 1 && cd ./juice-shop && npm install && npm start &
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install wireshark
 RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure wireshark-common
@@ -96,7 +98,6 @@ RUN chmod +x /usr/bin/dumpcap
 RUN echo "#!/bin/bash" > /startkali.sh
 RUN echo "/etc/init.d/ssh start" >> /startkali.sh
 RUN chmod 755 /startkali.sh
-
 # #####################################################
 # Install the Kali Packages
 # #####################################################
