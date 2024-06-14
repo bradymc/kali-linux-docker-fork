@@ -82,9 +82,13 @@ RUN apt -y install --no-install-recommends sudo wget curl dbus-x11 xinit openssh
 RUN apt -y install locales
 RUN sed -i s/^#\ en_US.UTF-8\ UTF-8/en_US.UTF-8\ UTF-8/ /etc/locale.gen
 RUN locale-gen
-RUN apt install -y burpsuite nmap net-tools metasploit-framework nmap aircrack-ng hydra john hashcat sqlmap recon-ng sublist3r dirb libc6 libgcc-s1 
-libnode109 libstdc++6 lsof npm xdg-utils
-RUN git clone https://github.com/juice-shop/juice-shop.git --depth 1 && cd ./juice-shop && npm install && npm start &
+RUN apt purge npm nodejs
+RUN apt install -y burpsuite nmap net-tools metasploit-framework nmap aircrack-ng hydra john hashcat sqlmap recon-ng sublist3r dirb libc6 libgcc-s1 libnode109 libstdc++6 lsof npm nodejs
+RUN mkdir /root/juice2
+RUN git clone https://github.com/juice-shop/juice-shop.git --depth 1 /root/juice2
+WORKDIR /root/juice2
+RUN npm install
+WORKDIR /root
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install wireshark
 RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure wireshark-common
