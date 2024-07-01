@@ -38,9 +38,9 @@ DOCKERIMG="custom/kali-linux"
 
 # Name for Docker container generated from custom image
 CONTAINER="kali-linux"
-mkdir /tmp/vm
+#mkdir /tmp/vm
 # Host directory to mount to container
-HOSTDIR="/tmp/vm"
+HOSTDIR="C:\Users\Public""
 
 # Container directory to mount host directory
 CONTAINERDIR="/opt"
