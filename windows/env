@@ -40,7 +40,7 @@ DOCKERIMG="custom/kali-linux"
 CONTAINER="kali-linux"
 #mkdir /tmp/vm
 # Host directory to mount to container
-HOSTDIR="C:\Users\Public""
+HOSTDIR="C:\Users\Public"
 
 # Container directory to mount host directory
 CONTAINERDIR="/opt"
