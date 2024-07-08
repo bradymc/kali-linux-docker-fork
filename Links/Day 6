@@ -10,7 +10,10 @@ https://vulncheck.com/blog/state-of-exploitation-a-decade
 * Major vulnerabilities
 https://www.cloudflare.com/learning/security/ransomware/wannacry-ransomware/
 https://www.scmagazine.com/feature/digging-into-the-numbers-one-year-after-log4shell
-https://www.vox.com/2014/6/19/18076318/heartbleed 
+https://www.vox.com/2014/6/19/18076318/heartbleed
+
+* Testing NMAP
+http://scanme.nmap.org/
 
 * Bounties
 https://www.zerodium.com/program.html
