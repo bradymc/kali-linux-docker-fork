@@ -15,11 +15,15 @@ https://www.vox.com/2014/6/19/18076318/heartbleed
 * Testing NMAP
 http://scanme.nmap.org/
 
+* Vulns and exploits
+https://www.cvedetails.com/
+https://www.exploit-db.com/
+
 * Bounties
 https://www.zerodium.com/program.html
 https://security.apple.com/bounty/categories/
 
-* Zero days
+* iOS Zero days research
 https://citizenlab.ca/2023/09/blastpass-nso-group-iphone-zero-click-zero-day-exploit-captured-in-the-wild/
 
 * Funwork:
