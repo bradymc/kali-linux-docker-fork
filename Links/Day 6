@@ -12,8 +12,11 @@ https://www.cloudflare.com/learning/security/ransomware/wannacry-ransomware/
 https://www.scmagazine.com/feature/digging-into-the-numbers-one-year-after-log4shell
 https://www.vox.com/2014/6/19/18076318/heartbleed
 
-* Testing NMAP
+* Online scanning, data platforms
+https://www.shodan.io
+https://www.ssllabs.com/
 http://scanme.nmap.org/
+https://hackertarget.com/nmap-online-port-scanner/
 
 * Vulns and exploits
 https://www.cvedetails.com/
