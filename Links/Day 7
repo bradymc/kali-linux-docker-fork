@@ -1,3 +1,29 @@
+* AWS
+https://aws.amazon.com/compliance/shared-responsibility-model/
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference-arns.html
+https://aws.amazon.com/cli/
+
+* Cloud security news
+https://www.darkreading.com/cyberattacks-data-breaches/capital-one-attacker-exploited-misconfigured-aws-databases
+https://www.techmonitor.ai/technology/cybersecurity/pegasus-airline-data-breach-aws-bucket?cf-view
+https://www.itpro.com/security/30060/100gb-of-secret-nsa-data-found-on-unsecured-aws-s3-bucket
+
+* Challenges
+https://www.cloudhuntinggames.com/challenge
+http://flaws.cloud/
+
+* LLM's news
+https://cyberscoop.com/openai-microsoft-apt-llm/
+https://www.unite.ai/prompt-hacking-and-misuse-of-llm/
+https://techxplore.com/news/2024-06-gpt-hptsa-method-autonomously-hack.html 
+
+* OWASP Top 10 for LLM's
+https://genai.owasp.org/
+
+* Challanges
+https://gandalf.lakera.ai/
+https://portswigger.net/web-security/llm-attacks 
+
 *  Scholarships
 https://sfs.opm.gov/Student/Information
 
